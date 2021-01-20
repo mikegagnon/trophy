@@ -1,6 +1,6 @@
 // Michael N. Gagnon
 
-const Counter = {
+const TrophyApp = {
   data() {
     return {
       counter: 0
@@ -13,4 +13,4 @@ const Counter = {
   }
 }
 
-Vue.createApp(Counter).mount('#counter')
+Vue.createApp(TrophyApp).mount('#counter')
