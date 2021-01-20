@@ -1,0 +1,9 @@
+/**
+ * Michael N. Gagnon
+ *
+ * All styles presented here are for the demos. They are not intertwined with the Trophy library itself.
+ */
+
+.outlined {
+    outline: 1px solid gray;
+}

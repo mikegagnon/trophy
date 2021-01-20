@@ -7,14 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/demo.css">
   <script src="js/vue.global.3.0.5.js"></script>
 
 </head>
 
 <body>
 <p>Hello world! This is HTML5 Boilerplate.</p>
-<div id="counter">
+<div id="trophies-div" class="outlined">
   Counter: {{ counter }}
+  <div v-for="t in trophies" class="trophy-div outlined">
+    {{ t }}
+  </div>
 </div>
 
 <script src="js/plugins.js"></script>

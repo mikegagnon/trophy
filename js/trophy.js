@@ -3,7 +3,8 @@
 const TrophyApp = {
   data() {
     return {
-      counter: 0
+      counter: 0,
+      trophies: ["a", "b"],
     }
   },
   mounted() {
@@ -13,4 +14,4 @@ const TrophyApp = {
   }
 }
 
-Vue.createApp(TrophyApp).mount('#counter')
+Vue.createApp(TrophyApp).mount('#trophies-div')
