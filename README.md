@@ -2,6 +2,12 @@
 
 Michael N. Gagnon
 
+## Setup instructions on macOS
+
+To help debugging the Vue.js aspects of this project, I recommend installing their devtools into your browser: https://v3.vuejs.org/guide/installation.html#vue-devtools
+
+
+
 ## Timesheet
 
 All times are specified in Eastern Time.
