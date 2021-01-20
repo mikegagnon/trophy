@@ -14,7 +14,8 @@ All times are specified in Eastern Time.
 
 ### January 20, 2021
 
-- 4:45 pm to 
+- 4:45 pm to 5:10 pm, setup boiler plate, and reviewed Vue.js (I haven't used Vue.js in about six months, at least)
+- 6:15 pm to
 
 ## Caveats
 
