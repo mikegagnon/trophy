@@ -5,7 +5,7 @@ Michael N. Gagnon
 ## Dependencies
 
 1. Vue.js
-2. Bootstrap and Popper.js (just for tooltips)
+2. Bootstrap + Popper.js, bundled together (just for tooltips)
 
 ## Setup instructions on macOS
 
