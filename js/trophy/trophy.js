@@ -36,8 +36,8 @@ const TrophyApp = {
     return {
       counter: 0,
       trophies: [
-        {tid: "10stories", color: false},
-        {tid: "1story", color: true}
+        //{tid: "10stories", color: false},
+        //{tid: "1story", color: true}
       ]
     }
   },
@@ -49,7 +49,51 @@ const TrophyApp = {
       return BADGES[tid].name;
     },
     addTrophy() {
-      this.trophies.unshift({tid: "1hour", color:true});
+      // If there are no trophies
+      if (this.trophies.length == 0) {
+        this.trophies.push({
+          tid: TORDER[0],
+          color: true,
+        });
+        return;
+      }
+
+      // See if we can colorize a grayed-out trophy
+      let index = 0;
+      let found = false;
+
+      // Find the trophy that should become colored
+      for (let i = 0; i < this.trophies.length; i++) {
+        const elem = this.trophies[i];
+        if (!elem.color) {
+          index = i;
+          found = true;
+        }
+      }
+
+      if (found) {
+        this.trophies[index].color = true;
+        return;
+      }
+
+      // Else, find the next trophy to celebrate      
+      const mostRecentTid = this.trophies[0].tid;
+      // Find next trophy based on TORDER
+      const recentTrophyIndex = TORDER.findIndex(tid => tid === mostRecentTid);
+      const nextTrophyIndex = recentTrophyIndex + 1;
+
+      // If there is no next trophy
+      if (nextTrophyIndex == TORDER.length) {
+        return;
+      }
+
+      const nextTrophyTid = TORDER[nextTrophyIndex];
+      this.trophies.unshift({
+        tid: nextTrophyTid,
+        color: true,
+      });
+
+
     },
   },
   mounted() {
