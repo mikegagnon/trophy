@@ -30,13 +30,14 @@ const TORDER = [
   "1hour",
 ];
 
+
 const TrophyApp = {
   data() {
     return {
       counter: 0,
       trophies: [
-        "10stories",
-        "1story",
+        {tid: "10stories", color: false},
+        {tid: "1story", color: true}
       ]
     }
   },
@@ -48,7 +49,7 @@ const TrophyApp = {
       return BADGES[tid].name;
     },
     addTrophy() {
-      this.trophies.unshift("1hour");
+      this.trophies.unshift({tid: "1hour", color:true});
     },
   },
   mounted() {

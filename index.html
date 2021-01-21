@@ -28,7 +28,7 @@
         <div class="container">
           <h1 class="display-3">Trophies!</h1>
           <div id="trophies-div" class="trophy-container">
-            <img v-for="t in trophies" :key="t" class="trophy-div trophy-big trophy-gray" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
+            <img v-for="t in trophies" :key="t.tid" v-bind:class="{ 'trophy-gray': !t.color}" class="trophy-big" :src="getTrophyImgUrl(t.tid)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t.tid)">
             <div class="add-trophy"><button class="btn btn-primary btn-lg" v-on:click="addTrophy()" role="button">Add trophy</button></div>
           </div>
         </div>
@@ -61,7 +61,7 @@
     </main>
 
 <div id="trophies-div" class="outlined">
-  <img v-for="t in trophies" :key="t" class="trophy-div outlined trophy-big trophy-gray" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
+  <img v-for="t in trophies" :key="t" class="outlined trophy-big trophy-gray" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
     <!-- https://vuejs.org/v2/guide/transitions.html -->
   </div>
 
