@@ -25,7 +25,8 @@ All times are specified in Eastern Time.
 ### January 21, 2021
 
 - 11:00 am to 11:40 am, begin work setting up trophy system
-- 11:50 am to 
+- 11:50 am to 1:00 pm, timeed out on animations
+- 1:00 pm to , craft demo page
 
 ## Caveats
 
