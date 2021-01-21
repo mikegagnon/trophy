@@ -8,3 +8,12 @@
     max-width: 150px;
 }
 
+/* https://stackoverflow.com/questions/286275/gray-out-image-with-css */
+.trophy-gray {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+    opacity: 0.5;
+}
