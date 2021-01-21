@@ -22,6 +22,11 @@ All times are specified in Eastern Time.
 - 4:45 pm to 5:10 pm, setup boiler plate, and reviewed Vue.js (I haven't used Vue.js in about six months, at least)
 - 6:15 pm to 7:10 pm, playing with Vue
 
+### January 21, 2021
+
+- 11:00 am to 11:40 am, begin work setting up trophy system
+- 11:50 am to 
+
 ## Caveats
 
 Only works on modern browsers. For example, does not work on IE8 (2009) and below, because Vue.js uses un-shimmable features only available after IE8. Further, I have coded this exercise in ECMA 6 (2015). Fortunately, if we wanted to, we could compiled the ECMA 6 code to ECMA 5, via Babel, but I omit that step here, for simplicity sake. However, based on all my previous usage of Babel, it has always magically worked with my ECMA 6 code, giving me optimism I could perform the same stunt again, with high likilhood of success. And even if it were to fail, it would probably not be a fatal problem; rather, it would probably just require some tweaking, since my code isn't particularly funky.

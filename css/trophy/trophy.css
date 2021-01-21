@@ -17,3 +17,58 @@
             filter: grayscale(100%); 
     opacity: 0.5;
 }
+
+/*  https://stackoverflow.com/questions/16771225/css3-rotate-animation
+    https://jsfiddle.net/sELBM/426/
+ */
+
+.animated {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.animated:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/* https://vuejs.org/v2/guide/transitions.html */
+/*.bounce-enter-active {
+  animation: bounce-in 1s;
+}
+*/
+/*.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}*/
+/*@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}*/
+
+.fade-enter-active, .fade-leave-active {
+    transition: all 100s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: rotate(720deg);
+}
+
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.list-enter-active, .list-leave-active {
+  transition: all 100s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}

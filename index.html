@@ -16,12 +16,11 @@
 </head>
 
 <body>
-<p>Hello world! This is HTML5 Boilerplate.</p>
 <div id="trophies-div" class="outlined">
-  Counter: {{ counter }}
-  <div v-for="t in trophies" class="trophy-div outlined">
-    <img class="trophy-big trophy-gray" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
+  <img v-for="t in trophies" :key="t" class="trophy-div outlined trophy-big trophy-gray" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
+    <!-- https://vuejs.org/v2/guide/transitions.html -->
   </div>
+
 </div>
 
 <script src="js/demo/plugins.js"></script>

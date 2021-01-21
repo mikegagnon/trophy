@@ -35,7 +35,7 @@ const TrophyApp = {
   },
   methods: {
     getTrophyImgUrl(tid) {
-      return `img/emojis/${BADGES[tid].img}`;
+      return `img/trophy/${BADGES[tid].img}`;
     },
     getTrophyName(tid) {
       return BADGES[tid].name;
