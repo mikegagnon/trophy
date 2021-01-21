@@ -15,7 +15,7 @@ All times are specified in Eastern Time.
 ### January 20, 2021
 
 - 4:45 pm to 5:10 pm, setup boiler plate, and reviewed Vue.js (I haven't used Vue.js in about six months, at least)
-- 6:15 pm to , playing with Vue
+- 6:15 pm to 7:10 pm, playing with Vue
 
 ## Caveats
 
@@ -23,4 +23,4 @@ Only works on modern browsers. For example, does not work on IE8 (2009) and belo
 
 ## Copyrights
 
-All trophy images taken from https://emojipedia.org, and are copyrighted by others, msotly Apple. I'm unsure what license they offer, but since this demo is merely private a demo, I think we're fine. The open-licensed emojis I found weren't as nice IMO.
+All trophy images taken from https://emojipedia.org, and are copyrighted by others, mostly Apple. I'm unsure what license they offer, but since this demo is merely private a demo, I think we're fine. The open-licensed emojis I found weren't as nice IMO.
