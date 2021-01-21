@@ -1,4 +1,9 @@
 
+
+.trophy-img {
+    cursor: pointer;
+}
+
 .trophy-small {
     max-height: 50px;
     max-width: 50px;

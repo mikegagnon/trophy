@@ -23,13 +23,50 @@
 
     <main role="main">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
+
       <div class="jumbotron">
         <div class="container">
           <h1 class="display-3">Trophies!</h1>
           <div id="trophies-div" class="trophy-container">
-            <img v-for="t in trophies" :key="t.tid" v-bind:class="{ 'trophy-gray': !t.color}" class="trophy-big" :src="getTrophyImgUrl(t.tid)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t.tid)">
-            <div class="add-trophy"><button class="btn btn-primary btn-lg" v-on:click="addTrophy()" role="button">Add trophy</button></div>
+
+
+<div class="modal fade" id="trophy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{getModalTitle()}}</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="float:left" >
+          <img :src="getModalImgUrl()" :class="getTrophyClass()">
+        </div>
+        <p>{{getModalDesc()}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <img
+              v-for="t in trophies"
+              v-on:click="openModal(t.tid)"
+              :key="t.tid"
+              v-bind:class="{ 'trophy-gray': !t.color}"
+              class="trophy-big trophy-img"
+              :src="getTrophyImgUrl(t.tid)"
+              data-toggle="tooltip"
+              data-placement="top"
+              :title="getTrophyName(t.tid)"
+            >
+
+            <div class="add-trophy"><button class="btn btn-primary btn-lg" v-on:click="addNextTrophy()" role="button">Add trophy</button></div>
           </div>
         </div>
       </div>
@@ -38,19 +75,32 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Approach</h2>
+            <p>I approached this challenge as if it were my first assignment at Readlee, while imagining my supervisor is an overloaded engineer. Thus, I applied my theory of information overloads to approach the assignment. I recently submitted a paper on my theory to an academic computer-security conference, SADFE 2021. My draft is available at <a href="https://michaelgagnon.me/file/zbg-draft.pdf">https://michaelgagnon.me/file/zbg-draft.pdf</a></p>
+
+            <p>Essentially, I made solid progress for 120 minutes, then spent an hour going down a fruitless rabbithole (animation), becoming stuck. So, I quickly wrapped up my work, and submitted it.</p>
+
+            <p>My theory, in this case, was to work independently for as long as possible, not get too overloaded by a yak shave, then submit my incompleted work. This approach benefits myself, and also my supervisor. It benefits my supervisor, because I waited to ask for help (on animation) after giving it my best effort for an hour, saving my supervisor time and energy. Perhaps my supervisor is familiar with integrating CSS animations into Vue.js, in which case a quick pointer might unblock both of us. Or perhaps my supervisor tells me to keep going down the rabbit hole, or perhaps tells me my appraoch is entirely wrong to begin with.</p>
+
+            <p>More generallly, supervisor-subordinate relationships, in sofware engineering, are often characterized by a delicate balance of attempting to help each other, while also avoiding unnecessary and burdensome labor. Essentially, we must balance independent work, with asking for help. If hired at Readlee, one of my top priorities will be to offload work from my supervisor (supposing they're overloaded), while als working efficiently, and coping with rabbit holes intelligently.</p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Animation</h2>
+            <p>I believe animating trophies should be a top priority. Beautiful and pleasing animations help reinforce the nueral pathways that reward good work. I know it is possible to add wonderful animations to my system, in a minimally noninvasive manner (using <code>transition groups</code> from Vue.js), however I became bogged down debugging an animation system during this assignment. I am confident I am capable of figuring out the problems I encountered, it will just take time---peerhaps another hour or two, maybe more.</p>
+
+            <p>More generally, I would be delighted to study the scientific literature on gamification, to help us engineer rewarding reading experiences. At the very least, I am aware that frequent rewards help reinforce behavior. Thus, I have added a &ldquo;1 story read&rdquo; trophy, to reward students, early in their use of the app. </p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Code</h2>
+            <p>I chose Vue.js to implement my trophy library. I believe Vue.js is a good choice for this problem, because it offers elegant MVC separation of concerns. To add the next trophy, just invoke the <code>addNextTrophy()</code> method. It wouldn't take much effort to add a more general <code>addTrophy(trophyId)</code> method, to allow arbitrary orderings of trophies.
+            </p>
+
+            <p>To insert a listing of trophies into HTML, just use a Vue.js <code>img</code> element, like so:
+            </p>
+
+            <p><img src="img/demo/code.png" style="width: 100%"></p>
+
+            <p>The JavaScript code 106 lines long, and the CSS code is 21 lines long.</p>
           </div>
         </div>
 
