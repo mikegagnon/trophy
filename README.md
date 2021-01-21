@@ -2,6 +2,11 @@
 
 Michael N. Gagnon
 
+## Dependencies
+
+1. Vue.js
+2. Bootstrap and Popper.js (just for tooltips)
+
 ## Setup instructions on macOS
 
 To help debugging the Vue.js aspects of this project, I recommend installing their devtools into your browser: https://v3.vuejs.org/guide/installation.html#vue-devtools
