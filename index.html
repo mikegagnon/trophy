@@ -29,29 +29,28 @@
           <h1 class="display-3">Trophies!</h1>
           <div id="trophies-div" class="trophy-container">
 
-
-<div class="modal fade" id="trophy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{getModalTitle()}}</h5>
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div style="float:left" >
-          <img :src="getModalImgUrl()" :class="getTrophyClass()">
-        </div>
-        <p>{{getModalDesc()}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="modal fade" id="trophy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{getModalTitle()}}</h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div style="float:left" >
+                      <img :src="getModalImgUrl()" :class="getTrophyClass()">
+                    </div>
+                    <p>{{getModalDesc()}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <img
               v-for="t in trophies"
@@ -71,7 +70,7 @@
       </div>
 
       <div class="container">
-        <!-- Example row of columns -->
+        
         <div class="row">
           <div class="col-md-4">
             <h2>Approach</h2>
@@ -103,7 +102,20 @@
           </div>
         </div>
 
-        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Backend</h2>
+            <p>I am confused by the assignment's request for upper level applications to simulate a backend. I don't understand what I am supposed to do. Thus, in the spirit of my rapid-response approach, I have punted on that task,  requesting further guidance.</p>
+          </div>
+          <div class="col-md-4">
+            <h2>Testability</h2>
+            <p>Vue's MVC seperation of concerns helps make my code more testable, though I haven't written any tests. Rather, I manually, by hand, tested out various corner cases.</p>
+          </div>
+          <div class="col-md-4">
+            <h2>Firestore</h2>
+            <p>It's been several months since I've used Firestore. My next technical step would be to seek further guidance from my supervisor on their requirements for Firestore integration, while, in the mean time, studying up on Firestore.</p>
+          </div>
+        </div>
 
       </div> <!-- /container -->
 
