@@ -1,5 +1,9 @@
 // Michael N. Gagnon
 
+
+// TODO: place advice and explain
+// Advice from: https://stackoverflow.com/questions/37078423/how-can-add-bootstrap-tooltip-inside-vue-js
+
 const BADGES = {
   "1story": {
     img: "smile-book.png",
@@ -13,7 +17,7 @@ const BADGES = {
     img: "open-book.png",
     name: "20 stories read",
   },
-  "1 hour of reading": {
+  "1hour": {
     img:"books.png",
     name: "1 hour of reading",
   },
@@ -30,9 +34,12 @@ const TrophyApp = {
     }
   },
   methods: {
-    getTrophyImgUrl(tname) {
-      return `img/emojis/${BADGES[tname].img}`;
-    }
+    getTrophyImgUrl(tid) {
+      return `img/emojis/${BADGES[tid].img}`;
+    },
+    getTrophyName(tid) {
+      return BADGES[tid].name;
+    },
   },
   mounted() {
     setInterval(() => {

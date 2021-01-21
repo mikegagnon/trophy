@@ -19,7 +19,7 @@
 <div id="trophies-div" class="outlined">
   Counter: {{ counter }}
   <div v-for="t in trophies" class="trophy-div outlined">
-    <img :src="getTrophyImgUrl(t)">
+    <img :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
   </div>
 </div>
 
