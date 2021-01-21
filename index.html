@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/demo/main.css">
   <link rel="stylesheet" href="css/demo/demo.css">
   <link rel="stylesheet" href="css/trophy/depends/bootstrap.css">
+  <link rel="stylesheet" href="css/trophy/trophy.css">
   <script src="js/trophy/depends/vue.global.3.0.5.js"></script>
   <script src="js/trophy/depends/jquery-3.5.1.js"></script>
   <script src="js/trophy/depends/bootstrap.bundle.js"></script>
@@ -19,7 +20,7 @@
 <div id="trophies-div" class="outlined">
   Counter: {{ counter }}
   <div v-for="t in trophies" class="trophy-div outlined">
-    <img :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
+    <img class="trophy-big" :src="getTrophyImgUrl(t)" data-toggle="tooltip" data-placement="top" :title="getTrophyName(t)">
   </div>
 </div>
 
