@@ -45,7 +45,14 @@ const TrophyApp = {
     setInterval(() => {
       this.counter++
     }, 1000)
-  }
+  },
+  updated: function () {
+    // TODO: I'm not confident this updated function is the best idea
+    // TODO: test
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  },
 }
 
 Vue.createApp(TrophyApp).mount('#trophies-div')
