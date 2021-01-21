@@ -57,8 +57,12 @@ const TrophyApp = {
       return `img/trophy/${BADGES[this.modalTid].img}`;
     },
     getModalDesc() {
-      return BADGES[this.modalTid].announce;
-    },
+      if (this.isTrophyAwarded(this.modalTid)) {
+        return BADGES[this.modalTid].award;
+      } else {
+        return BADGES[this.modalTid].announce;
+      }
+     },
     getTrophyImgUrl(tid) {
       return `img/trophy/${BADGES[tid].img}`;
     },
