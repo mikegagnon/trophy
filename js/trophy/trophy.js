@@ -55,4 +55,4 @@ const TrophyApp = {
   },
 }
 
-Vue.createApp(TrophyApp).mount('#trophies-div')
+const vt = Vue.createApp(TrophyApp).mount('#trophies-div')
